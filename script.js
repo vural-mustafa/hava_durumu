@@ -1,4 +1,4 @@
-const conatiner =document.querySelector('.container');
+const container =document.querySelector('.container');
 const search = document.querySelector('.search-box button');
 const weatherBox = document.querySelector('.weather-box');
 const weatherDetails=document.querySelector('.weather-details');
@@ -8,7 +8,7 @@ search.addEventListener('click',() => {
     const ApiKey = '93bbbf1a54364548f7080778169453da';
     const sehir =document.querySelector('.search-box input').value;
 
-    if(sehir===''){
+    if(sehir=== ''){
         return;
     }
         
@@ -16,7 +16,7 @@ search.addEventListener('click',() => {
 
 
             if(json.cod==='404'){
-                conatiner.style.height='420px';
+                container.style.height='420px';
                 weatherBox.style.display='none';
                 weatherDetails.style.display='none';
                 hata.style.display='none';
@@ -62,7 +62,7 @@ search.addEventListener('click',() => {
             weatherDetails.style.display='';
             weatherBox.classList.add('fadeIn');
             weatherDetails.classList.add('fadeIn');
-            conatiner.style.height='605px';
+            container.style.height='605px';
 
         }
         )}       
